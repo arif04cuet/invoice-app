@@ -1,0 +1,36 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+// Plugins
+//----------------------------------
+
+@import '../../../node_modules/toastr/toastr';
+
+// Base Components
+//----------------------------------
+
+@import 'components/v-tooltips.scss';
+
+// Components
+//----------------------------------
+
+@import 'components/pace-loader';
+@import 'components/animation';
+
+.swal-icon--custom {
+  height: 80px;
+  width: 80px;
+}
+
+@media (max-width: 768px) {
+  .table-component .sw-dropdown {
+    position: absolute;
+    visibility: visible;
+    top: 15px;
+    right: 10px;
+  }
+}
