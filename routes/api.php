@@ -110,7 +110,6 @@ Route::prefix('/v1')->group(function () {
 
         // handle reset password form process
         Route::post('reset/password', [ResetPasswordController::class, 'reset']);
-
     });
 
 
@@ -138,7 +137,6 @@ Route::prefix('/v1')->group(function () {
         Route::get('/onboarding/database/config', [DatabaseConfigurationController::class, 'getDatabaseEnvironment']);
 
         Route::post('/onboarding/finish', FinishController::class);
-
     });
 
 
@@ -342,6 +340,5 @@ Route::prefix('/v1')->group(function () {
         Route::post('/users/delete', [UsersController::class, 'delete']);
 
         Route::apiResource('/users', UsersController::class);
-
     });
 });

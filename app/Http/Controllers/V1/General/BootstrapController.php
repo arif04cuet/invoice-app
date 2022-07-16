@@ -22,7 +22,7 @@ class BootstrapController extends Controller
     {
         $user = Auth::user();
 
-        $default_language = $user->getSettings(['language'])['language'];
+        $default_language = 'en'; //$user->getSettings(['language'])['language'];
 
         $settings = [
             'moment_date_format',
