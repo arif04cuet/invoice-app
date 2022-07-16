@@ -11,6 +11,33 @@ use Illuminate\Support\Facades\Auth;
 
 class CompanyController extends Controller
 {
+
+    public function index(Request $request)
+    {
+        $limit = $request->has('limit') ? $request->limit : 10;
+
+        $companies = Company::with('user')
+            ->applyFilters(
+                $request->only([
+                    'phone',
+                    'email',
+                    'name',
+                    'orderByField',
+                    'orderBy'
+                ])
+            )
+            ->latest()
+            ->paginate($limit);
+
+        return response()->json([
+            'companies' => $companies
+        ]);
+    }
+
+    public function show(Request $request, Company $company)
+    {
+        return response()->json($company);
+    }
     /**
      * Retrive the Admin account.
      * @return \Illuminate\Http\JsonResponse

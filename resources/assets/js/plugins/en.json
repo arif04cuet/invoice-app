@@ -10,7 +10,8 @@
     "reports": "Reports",
     "settings": "Settings",
     "logout": "Logout",
-    "users": "Users"
+    "users": "Users",
+    "companies": "Companies"
   },
   "general": {
     "add_company": "Add Company",
@@ -533,6 +534,32 @@
     "created_message": "User created successfully",
     "updated_message": "User updated successfully",
     "deleted_message": "User deleted successfully | User deleted successfully"
+  },
+  "companies": {
+    "title": "Companies",
+    "add_company": "Add Company",
+    "name": "Name",
+    "owner_name": "Owner Name",
+    "description": "Description",
+    "added_on": "Added On",
+    "date_of_creation": "Date Of Creation",
+    "action": "Action",
+    "save_company": "Save Company",
+    "update_company": "Update Company",
+    "Company": "Company | Companies",
+    "add_new_company": "Add New Company",
+    "new_company": "New Company",
+    "edit_company": "Edit Company",
+    "no_companies": "No companies yet!",
+    "list_of_companies": "This section will contain the list of companies.",
+    "email": "Email",
+    "phone": "Phone",
+    "password": "Password",
+    "user_attached_message": "Cannot delete an item which is already in use",
+    "confirm_delete": "You will not be able to recover this Company | You will not be able to recover these Users",
+    "created_message": "Company created successfully",
+    "updated_message": "Company updated successfully",
+    "deleted_message": "Company deleted successfully | Company deleted successfully"
   },
   "reports": {
     "title": "Report",

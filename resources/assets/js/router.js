@@ -55,6 +55,10 @@ import ExpenseCreate from './views/expenses/Create.vue'
 import UserIndex from './views/users/Index.vue'
 import UserCreate from './views/users/Create.vue'
 
+//Company
+import CompanyIndex from './views/companies/Index.vue'
+
+
 // Report
 import SalesReports from './views/reports/SalesReports'
 import ExpensesReport from './views/reports/ExpensesReport'
@@ -297,6 +301,12 @@ const routes = [
         path: 'users/:id/edit',
         name: 'users.edit',
         component: UserCreate,
+      },
+
+      // Company
+      {
+        path: 'companies',
+        component: CompanyIndex,
       },
 
       // Reports

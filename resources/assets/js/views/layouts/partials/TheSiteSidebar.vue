@@ -12,7 +12,18 @@
 
     <!-- DESKTOP MENU -->
     <div
-      class="hidden w-56 h-screen pb-32 overflow-y-auto bg-white border-r border-gray-200 border-solid xl:w-64 sw-scroll md:block"
+      class="
+        hidden
+        w-56
+        h-screen
+        pb-32
+        overflow-y-auto
+        bg-white
+        border-r border-gray-200 border-solid
+        xl:w-64
+        sw-scroll
+        md:block
+      "
     >
       <sw-list
         v-for="(menuItems, groupIndex) in menuItems"
@@ -43,7 +54,20 @@
     >
       <div
         v-show="isSidebarOpen"
-        class="fixed top-0 z-30 w-64 h-screen pt-16 pb-32 overflow-y-auto bg-white border-r border-gray-200 border-solid sw-scroll md:hidden"
+        class="
+          fixed
+          top-0
+          z-30
+          w-64
+          h-screen
+          pt-16
+          pb-32
+          overflow-y-auto
+          bg-white
+          border-r border-gray-200 border-solid
+          sw-scroll
+          md:hidden
+        "
       >
         <sw-list
           v-for="(menuItems, groupIndex) in menuItems"
@@ -162,6 +186,19 @@ export default {
             route: '/admin/users',
           },
           ...menu[2],
+        ]
+      }
+
+      if (
+        this.currentUser.role == 'super admin' &&
+        this.currentUser.company.id == 1
+      ) {
+        menu[3] = [
+          {
+            title: 'navigation.companies',
+            icon: 'users-icon',
+            route: '/admin/companies',
+          },
         ]
       }
 

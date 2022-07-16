@@ -20,6 +20,7 @@ import modal from './modules/modal'
 import customFields from './modules/custom-field'
 import taxType from './modules/tax-type'
 import users from './modules/users'
+import companies from './modules/companies'
 import backup from './modules/backup'
 import disks from './modules/disk'
 import estimateTemplate from './modules/estimate-template'
@@ -70,6 +71,7 @@ export default new Vuex.Store({
     payment,
     taxType,
     users,
+    companies,
     backup,
     disks,
     estimateTemplate,

@@ -304,6 +304,10 @@ Route::prefix('/v1')->group(function () {
         Route::post('/me/upload-avatar', [CompanyController::class, 'uploadAvatar']);
 
 
+        //Companies
+        Route::get('/companies', [CompanyController::class, 'index']);
+        Route::get('/companies/{company}', [CompanyController::class, 'show']);
+
         Route::put('/company', [CompanyController::class, 'updateCompany']);
 
         Route::post('/company/upload-logo', [CompanyController::class, 'uploadCompanyLogo']);

@@ -93,7 +93,16 @@
 
     <div class="relative table-container" v-show="!showEmptyScreen">
       <div
-        class="relative flex items-center justify-between h-10 mt-5 list-none border-b-2 border-gray-200 border-solid"
+        class="
+          relative
+          flex
+          items-center
+          justify-between
+          h-10
+          mt-5
+          list-none
+          border-b-2 border-gray-200 border-solid
+        "
       >
         <p class="text-sm">
           {{ $t('general.showing') }}: <b>{{ users.length }}</b>
@@ -107,7 +116,15 @@
           <sw-dropdown v-if="selectedUsers.length">
             <span
               slot="activator"
-              class="flex block text-sm font-medium cursor-pointer select-none text-primary-400"
+              class="
+                flex
+                block
+                text-sm
+                font-medium
+                cursor-pointer
+                select-none
+                text-primary-400
+              "
             >
               {{ $t('general.actions') }}
               <chevron-down-icon class="h-5" />
