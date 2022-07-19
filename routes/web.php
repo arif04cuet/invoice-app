@@ -45,7 +45,6 @@ Route::prefix('reports')->group(function () {
     // report for profit and loss
     //----------------------------------
     Route::get('/profit-loss/{hash}', ProfitLossReportController::class);
-
 });
 
 
@@ -99,7 +98,7 @@ Route::get('/on-boarding', function () {
 
 Route::get('/admin/{vue?}', function () {
     return view('app');
-})->where('vue', '[\/\w\.-]*')->name('admin')->middleware(['install', 'redirect-if-unauthenticated']);
+})->where('vue', '[\/\w\.-]*')->name('admin')->middleware(['redirect-if-unauthenticated']);
 
 
 // Move other http requests to the Vue App
@@ -107,4 +106,4 @@ Route::get('/admin/{vue?}', function () {
 
 Route::get('/{vue?}', function () {
     return view('app');
-})->where('vue', '[\/\w\.-]*')->name('login')->middleware(['install', 'guest']);
+})->where('vue', '[\/\w\.-]*')->name('login')->middleware(['guest']);
